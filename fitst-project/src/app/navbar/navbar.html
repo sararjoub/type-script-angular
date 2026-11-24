@@ -1,0 +1,23 @@
+<nav>
+
+  <button (click)="changePage('Home')">
+    Home
+  </button>
+
+  <button (click)="changePage('Products')">
+    Products
+  </button>
+
+  <button (click)="changePage('About Us')">
+    About Us
+  </button>
+
+  <button (click)="changePage('Contact Us')">
+    Contact Us
+  </button>
+
+</nav>
+
+<p class="selected-page">
+  Selected Page: {{ selectedPage }}
+</p>

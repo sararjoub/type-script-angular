@@ -1,58 +1,14 @@
-
 <div class="container">
 
-  <header>
-    <h1>{{ storeName }}</h1>
-    <p>{{ storeDescription }}</p>
-    <p>{{ storeAddress }}</p>
-  </header>
+  <app-header></app-header>
+
+  <app-navbar></app-navbar>
 
   <h3 class="status">{{ storeStatus }}</h3>
 
-  <h2>Featured Product</h2>
+  <app-product-list></app-product-list>
 
-  <div class="featured">
-    <h3>{{ featuredProduct.name }}</h3>
-    <p>{{ featuredProduct.description }}</p>
-
-    <span class="old-price">
-      ${{ featuredProduct.price }}
-    </span>
-
-    <span class="new-price">
-      ${{ finalPrice }}
-    </span>
-
-    <span class="discount">
-      {{ discountPercentage }}% Discount
-    </span>
-  </div>
-
-  <h2>Our Products</h2>
-
-  <div class="products">
-
-    <div class="product">
-      <h3>{{ productNames[1] }}</h3>
-      <p>${{ productPrices[1] }}</p>
-    </div>
-
-    <div class="product">
-      <h3>{{ productNames[2] }}</h3>
-      <p>${{ productPrices[2] }}</p>
-    </div>
-
-    <div class="product">
-      <h3>{{ productNames[3] }}</h3>
-      <p>${{ productPrices[3] }}</p>
-    </div>
-
-    <div class="product">
-      <h3>{{ productNames[4] }}</h3>
-      <p>${{ productPrices[4] }}</p>
-    </div>
-
-  </div>
+  <app-product-details></app-product-details>
 
   <h2>Store Summary</h2>
 
@@ -79,5 +35,7 @@
     </div>
 
   </div>
+
+  <app-footer></app-footer>
 
 </div>

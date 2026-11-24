@@ -1,0 +1,57 @@
+<h2>Product Details</h2>
+
+<div class="details">
+
+  <img [src]="productImage" [alt]="productName">
+
+  <div class="information">
+
+    <h3>{{ productName }}</h3>
+
+    <p>{{ productDescription }}</p>
+
+    <p class="availability">
+      {{ isAvailable ? 'Available' : 'Unavailable' }}
+    </p>
+
+    <span class="old-price">
+      ${{ productPrice }}
+    </span>
+
+    <span class="new-price">
+      ${{ getFinalPrice() }}
+    </span>
+
+    <span class="discount">
+      {{ discountPercentage }}% Discount
+    </span>
+
+    <div class="quantity">
+
+      <button
+        (click)="decreaseQuantity()"
+        [disabled]="quantity <= 1">
+        -
+      </button>
+
+      <span>{{ quantity }}</span>
+
+      <button (click)="increaseQuantity()">
+        +
+      </button>
+
+    </div>
+
+    <h3>Total Price: ${{ getTotalPrice() }}</h3>
+
+    <label>Update Product Name:</label>
+
+    <input
+      #nameInput
+      type="text"
+      [value]="productName"
+      (input)="updateName(nameInput.value)">
+
+  </div>
+
+</div>
